@@ -5,8 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export class Navigation extends Component{
     render(){
-        return(
-            
+        return(            
             <Navbar bg="primary" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">Home</Navbar.Brand>
