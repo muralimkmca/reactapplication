@@ -8,14 +8,12 @@ export class Listfood extends Component{
       super(props)
     
       this.state = {
-         foods:[],
-         id:"",
-         foodName:"",
-         foodDesc:""
+         foods:[]
+        
       }
     }
 
-    componentDidMount(){
+    componentDidMount(){        
         axios.get(variables.API_URL)
         .then(response => { this.setState({foods:response.data})
         }).catch(error => { console.log(error)})
