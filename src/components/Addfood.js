@@ -13,9 +13,7 @@ export class Addfood extends Component{
       }
     }
 
-    handleChange=(e) =>{
-        console.log(e.target.value);   
-        console.log(e.target.name);     
+    handleChange=(e) =>{        
         this.setState({
             [e.target.id]:e.target.value,            
         })
@@ -23,8 +21,7 @@ export class Addfood extends Component{
 
     handleSubmit=(e) =>{      
         e.preventDefault();  
-        console.log(this.state);
-        
+              
         axios({
             method:'post',
             url:variables.API_URL,
@@ -32,7 +29,7 @@ export class Addfood extends Component{
                 foodName:this.state.foodName,
                 foodDesc:this.state.foodDesc
             }
-        }).then(response =>{console.log(response)})
+        })
     }
 
 
